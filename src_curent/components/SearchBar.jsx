@@ -1,16 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import '../App.css';
+
 
 function SearchBar() {
   
   const dispatch = useDispatch();
   const [isbnNum, setisbnNum] = React.useState('0545162076');
 
-  const getBookData = () => {
-    // Get the Data for the book
+  const getUserData = () => {
+    // Get the Data for the User
     dispatch({ 
-      type: "BOOK_FETCH_REQUESTED",
+      type: "USER_FETCH_REQUESTED",
       payload: {
         isbnNum: isbnNum
       }
@@ -31,7 +31,7 @@ function SearchBar() {
                 </div>
                 
                 <div class="col-auto">
-                    <button onClick={getBookData} class="btn btn-lg btn-success" >Search</button>
+                    <button onClick={getUserData} class="btn btn-lg btn-success" >Search</button>
                 </div>
             </div>
         </div>

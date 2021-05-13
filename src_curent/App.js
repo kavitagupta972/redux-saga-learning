@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 
 import SearchBar from "./components/SearchBar";
-// import SearchReults from "./components/SearchReults";
-import Result from "./components/SearchResults";
+import SearchReults from "./components/SearchReults";
 import Header from './components/Header';
 
 function App() {
@@ -11,9 +10,9 @@ function App() {
     
       <div className="App-header">
         <Header />
-        <div className="container">
+        <div class="container">
           <SearchBar />
-          <Result />
+          <SearchReults />
         </div>
       </div>
     

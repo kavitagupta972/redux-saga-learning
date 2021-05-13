@@ -1,8 +1,9 @@
-const bookReducer = (state, action) =>{
+let state = {};
+const userReducer = (state, action) =>{
 switch (action.type) {
-    case "BOOK_FETCH_REQUESTED":
+    case "USER_FETCH_REQUESTED":
     return { ...state, response: null, loading: true }
-    case "BOOK_FETCH_SUCCEEDED":
+    case "USER_FETCH_SUCCEEDED":
      return { ...state, response: action.response, loading: false }
     default:
       return {
@@ -11,4 +12,5 @@ switch (action.type) {
   }
 }
  
-export default bookReducer;
+export default userReducer;
+ 
